@@ -213,7 +213,7 @@ p.message {
     
     .avatar {
         max-width: 30%;
-        max-height: auto;
+        max-height: fit-content;
         width: auto;
         height: auto;
         margin-left: 5% ;
