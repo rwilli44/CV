@@ -18,15 +18,15 @@ body {
     margin: 0;
 }
 
-main {
-    padding-left: 1em;
-    padding-right: 1em;
-}
-
 html {
     width: 100%;
     scroll-behavior: smooth;
     margin: 0;
+}
+
+main {
+    padding-left: 1em;
+    padding-right: 1em;
 }
 
 .flex-container {
@@ -78,27 +78,31 @@ a {
     font-size: 1.3em;
 }
 
-/*This hides the detailed CV on small screens
-unless the user clicks to toggle*/
+/*This adjusts the display of each section so that the description is followed by the detailed information on smaller screens for the accessible version of the website*/
+
+.flex-container {
+    width: 100%;
+    flex-direction: column;
+}
+
+#certificationLogos  {
+    text-align: center;
+}
+
+/*This makes sure the social media logos continue to appear side by side on small screen when other flex boxes go vertical*/
+#link-logo-box {
+    flex-direction: row;
+}
 
 .detail {
-    display: none;
-    padding: 5px;
+    display: block;
+    width: 100%;
 }
 
 .summary {
-    padding: 5px;
+    display:block;
+    width: 100%;
 }
-
-table {
-    text-align: left;
-    font-size: 1.1em;
-}
-
-.set-date-col-width {
-    width:20%;
-}
-
 
 
 /* HEADER style info*/
@@ -106,6 +110,7 @@ table {
 #top {
     flex-direction: column;
 }
+
 .avatar {
     max-width: 60%;
     height: auto;
@@ -145,34 +150,6 @@ nav {
     background-color: var(--main-color);
     text-align: center;
     font-size: 1.5rem;
-}
-
-.sticky {
-    background-color: var(--accent);
-    color: white;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    position: -webkit-sticky; /* Safari */
-    position: sticky;
-    top: 0;
-    font-size: .8em;
-    text-transform: uppercase;
-    text-align: center;
-    margin-top: 0;
-    padding-top: 0;
-}
-
-/* The following two sections are 
-needed to keep the sticky bar attached to the 
-navigation bar*/
-
-nav>ul {
-    margin-bottom: 0;
-    padding-bottom: 0;
-}
-
-.sticky>p {
-    margin-top: 0;
-    padding-top: 0;
 }
 
 
@@ -256,17 +233,15 @@ p.message {
         white-space: nowrap;
     }
 
-    /*The sticky bar is not necessary as 
-    there is no toggling on large screens*/
-
-    .sticky {
-        display: none;
-        font-size: 1.1em;
-    }
-
+    
     /*The following two sections make sure both the summary
     and detail blocks show and share the screen in place
     of toggling*/
+
+    .flex-container {
+        width: 100%;
+        flex-direction: row;
+    }
 
     .detail {
         display: block;

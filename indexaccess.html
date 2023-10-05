@@ -5,14 +5,13 @@
         <meta charset="utf-8">
         <title>Rachel WILLIAMS - développeuse Python - Big Data (en formation) </title>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" href="style.css" >
-        <script src="cv.js"></script>
+        <link rel="stylesheet" href="styleaccess.css" >
         <meta name="description" content="Rachel Williams cherche une entreprise sur Nantes pour un stage en conception et développement d'applications Python / Django - Big Data . ">
         <meta name="keywords" content="stage, data, développement web, python, développeur, CV, Nantes, Django">
         <meta name="author" content="Rachel Williams">
     </head>
 
-    <body onresize="checkFullScreen()">
+    <body>
 
         <header>
             <div id="top" class="flex-container">
@@ -30,7 +29,6 @@
                 </p>
                 </p>
             </div>
-            <p class="accessibility"> Si vous naviguez ce site sur un mobile ou une tabletteavec un outil d'accessibilité comme un lecteur d'écran, <a href="indexaccess.html#mainContent">cliquez ici pour une version du site plus accessible</a> qui ne vous demande pas de cliquer sur chaque partie pour basculer entre les différents contenus. </p>
             <p class="accessibility"><a href="#mainContent">Passez le menu pour le contenu principal</a></p>
             <nav>
                 <p class="accessibility">Menu Principal</p>
@@ -43,13 +41,10 @@
             </nav>
 
         </header>
-        <main id="mainContent">
-            <div class="sticky">
-                <p>🖱️ Cliquez sur chaque section pour plus de détails</p>
-            </div>
+        <main id="mainContent" >
 
             <!-- PROFESSIONAL EXPERIENCE SECTION -->
-            <div id="experience" onclick="ToggleInfo('experience')">
+            <div id="experience" >
                 <h2>Expérience professionnelle</h2>
                 <div class="flex-container">
                     <div id="experience-summary" class="summary">
@@ -123,9 +118,9 @@
             </div>
 
             <!-- IT TRAINING SECTION -->
-            <div id="formations" onclick="ToggleInfo('formation')">
+            <div id="formations" >
                 <h2>Formations et certifications en informatique</h2>    
-                <div class="flex-container">
+                <div class="flex-container" id="certificationLogos">
                     <a class="link-logo-cert" href="https://www.credly.com/badges/3a8d522f-dd01-438f-aca8-2ec731fa63cb/public_url" title="Lien vers le site de vérification de mon badge du certificat Google IT Support" > 
                         <img src="images/gcert.png" 
                             alt="Un badge credly Google IT Support Certificate"> 
@@ -249,7 +244,7 @@
             </div>
 
             <!-- UNIVERSITY STUDIES SECTION -->
-            <div id="études" onclick="ToggleInfo('degree')">
+            <div id="études">
                 <h2>Études Universitaires</h2>
                 <div class="flex-container">
                     <div id="degree-summary" class="summary">
@@ -328,18 +323,18 @@
             </div>
 
             <!-- ABOUT ME SECTION -->
-            <div id="aboutme"  onclick="ToggleInfo('aboutme')">
+            <div id="aboutme" >
                 <h2>Mieux me connaître</h2>
                 <div class="flex-container">
                     <div id="aboutme-summary" class="summary">
-                        <img class="portrait" alt="Rachel Williams avec son chien Buddy qui est tout beau avec son nœud papillon " src="images/mebuddy.png" >
+                        <img class="portrait" alt="Rachel Williams avec son chien Buddy qui est tout beau avec son nœud papillon" src="images/mebuddy.png" >
                     </div>
                     <div id="aboutme-list" class="detail">
                         <p class="self-description detail">
-                            Originaire de l'Oklahoma (yee-haw! 🤠), je suis Nantaise depuis 2012 et 
+                            Originaire de l'Oklahoma (yee-haw! 🤠<span class="accessibility">emoji de Cowboy</span>), je suis Nantaise depuis 2012 et 
                             française depuis 2022. De mon côté américain, je garde de <strong>
                             l'optimisme</strong>, une forte <strong>valeur du travail</strong> 
-                            et un amour pour les brunchs 🥞.
+                            et un amour pour les brunchs 🥞<span class="accessibility">emoji de pancakes</span>.
                             Mais je suis fière d'avoir fait ma vie en France où mes compatriotes 
                             partagent mes valeurs de la <strong>solidarité</strong> et <strong>
                             l'égalité</strong> ainsi que mon goût pour la beurre salée.
@@ -368,7 +363,7 @@
         </main>
         <footer>
             <p><strong>Contactez-moi sur LinkedIn</strong></p>
-            <div class="link-logo-box flex-container">
+            <div id="link-logo-box" class="flex-container">
                 <a class="link-logo-social" title="Lien vers mon profile Linkedin" href="https://www.linkedin.com/in/rachelinfrance/?locale=fr_FR">
                     <img class="link-logo-social" alt="logo du site Linkedin " src="images/linkedin.png" >
                 </a> 
